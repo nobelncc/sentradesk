@@ -319,42 +319,41 @@ nav a:hover{
 }
 
 /*=====================
+/*=====================
 ERP CONNECTING LINES
 =====================*/
 
-.center{
+.architecture{
     position:relative;
 }
 
-.center::before,
-.center::after{
+/* Vertical Line (Top to Bottom) */
+.architecture::before{
     content:"";
     position:absolute;
-    background:#cbd5e1;
+    left:50%;
+    top:120px;
+    width:2px;
+    height:510px;
+    background:#cfd8e3;
+    transform:translateX(-50%);
     z-index:0;
 }
 
-.center::before{
-    width:2px;
-    height:260px;
-    left:50%;
-    top:-130px;
-    transform:translateX(-50%);
-}
-
-.center::after{
-    width:420px;
-    height:2px;
+/* Horizontal Line (Left to Right) */
+.architecture::after{
+    content:"";
+    position:absolute;
     top:50%;
-    left:-210px;
+    left:220px;
+    right:220px;
+    height:2px;
+    background:#cfd8e3;
     transform:translateY(-50%);
+    z-index:0;
 }
 
-.circle{
-    position:relative;
-    z-index:2;
-}
-
+.center,
 .card{
     position:relative;
     z-index:2;
