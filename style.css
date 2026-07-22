@@ -318,6 +318,48 @@ nav a:hover{
 
 }
 
+/*=====================
+ERP CONNECTING LINES
+=====================*/
+
+.center{
+    position:relative;
+}
+
+.center::before,
+.center::after{
+    content:"";
+    position:absolute;
+    background:#cbd5e1;
+    z-index:0;
+}
+
+.center::before{
+    width:2px;
+    height:260px;
+    left:50%;
+    top:-130px;
+    transform:translateX(-50%);
+}
+
+.center::after{
+    width:420px;
+    height:2px;
+    top:50%;
+    left:-210px;
+    transform:translateY(-50%);
+}
+
+.circle{
+    position:relative;
+    z-index:2;
+}
+
+.card{
+    position:relative;
+    z-index:2;
+}
+
 /* ---------- CENTER ---------- */
 
 .center{
@@ -864,15 +906,19 @@ BENEFITS
 
 padding:120px 0;
 
-background:#0f3d75;
-
-color:white;
+background:#ffffff;
 
 }
 
 .benefits .section-title h2{
 
-color:white;
+color:#0f3d75;
+
+}
+
+.benefits .section-title p{
+
+color:#6b7280;
 
 }
 
@@ -992,13 +1038,17 @@ line-height:1.8;
 
 .footer{
 
-background:#081b34;
+padding:30px 0;
 
-color:white;
+background:#0f172a;
 
-padding:40px 0;
+color:#cbd5e1;
 
 text-align:center;
+
+font-size:15px;
+
+line-height:1.8;
 
 }
 
@@ -1058,6 +1108,574 @@ transition:.35s;
 .why-card:hover,
 .report-box:hover,
 .company-box:hover{
+
+transform:translateY(-8px);
+
+}
+/*==================================================
+HRMS JOURNEY
+==================================================*/
+
+.journey{
+    padding:120px 0;
+    background:#ffffff;
+}
+
+.journey-flow{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:60px;
+}
+
+.step{
+    width:170px;
+    min-height:140px;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    padding:25px;
+    text-align:center;
+    transition:.35s;
+}
+
+.step:hover{
+    transform:translateY(-8px);
+    background:#0f3d75;
+    color:#fff;
+}
+
+.step-icon{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.arrow{
+    font-size:28px;
+    color:#14b8a6;
+    font-weight:bold;
+}
+
+/*==================================================
+INVENTORY
+==================================================*/
+
+.inventory{
+    padding:120px 0;
+    background:#f7f9fc;
+}
+
+.workflow-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.workflow-card{
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.workflow-card:hover{
+    transform:translateY(-10px);
+}
+
+.wf-icon{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.workflow-card h3{
+    color:#0f3d75;
+    margin-bottom:15px;
+}
+
+.workflow-card p{
+    color:#6b7280;
+    line-height:1.8;
+}
+/*==================================================
+STORE MANAGEMENT
+==================================================*/
+
+.store{
+    padding:120px 0;
+    background:#ffffff;
+}
+
+.store-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.store-card{
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s;
+    border-top:5px solid #14b8a6;
+}
+
+.store-card:hover{
+    transform:translateY(-10px);
+}
+
+.store-icon{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.store-card h3{
+    color:#0f3d75;
+    margin-bottom:15px;
+}
+
+.store-card p{
+    color:#6b7280;
+    line-height:1.8;
+}
+
+/*==================================================
+REPORTS
+==================================================*/
+
+.reports{
+    padding:120px 0;
+    background:#f7f9fc;
+}
+
+.report-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.report-box{
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.report-box:hover{
+    transform:translateY(-10px);
+}
+
+.report-box h3{
+    color:#0f3d75;
+    margin-bottom:20px;
+}
+
+.report-box ul{
+    list-style:none;
+    padding:0;
+}
+
+.report-box li{
+    padding:10px 0;
+    border-bottom:1px solid #eef2f7;
+    color:#6b7280;
+}
+
+.report-box li:last-child{
+    border-bottom:none;
+}
+/*==================================================
+WHY SENTRADESK
+==================================================*/
+
+.why{
+    padding:120px 0;
+    background:#ffffff;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.why-card{
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s;
+    text-align:center;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+}
+
+.why-card h3{
+    color:#0f3d75;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#6b7280;
+    line-height:1.8;
+}
+
+/*==================================================
+BENEFITS
+==================================================*/
+
+.benefits{
+    padding:120px 0;
+    background:#f7f9fc;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.stat{
+    background:#0f3d75;
+    color:#fff;
+    text-align:center;
+    padding:40px 25px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(15,61,117,.25);
+}
+
+.stat h2{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:18px;
+    opacity:.9;
+}
+
+/*==================================================
+COMPANY
+==================================================*/
+
+.company{
+    padding:120px 0;
+    background:#ffffff;
+}
+
+.company-box{
+    max-width:900px;
+    margin:60px auto 0;
+    background:#fff;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.company-box h3{
+    color:#0f3d75;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.company-box>p{
+    color:#6b7280;
+    line-height:1.9;
+    margin-bottom:40px;
+}
+
+.contact-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    text-align:left;
+    margin-bottom:40px;
+}
+
+.contact-info p{
+    background:#f7f9fc;
+    padding:20px;
+    border-radius:12px;
+    line-height:1.8;
+}
+
+.contact-info strong{
+    color:#0f3d75;
+}
+
+/*==================================================
+FOOTER
+==================================================*/
+
+.footer{
+    background:#0b1f38;
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+}
+
+.footer p{
+    margin:8px 0;
+    opacity:.9;
+}
+/*==================================================
+BUTTON ANIMATIONS
+==================================================*/
+
+.btn-primary,
+.btn-outline,
+.btn-demo{
+    transition:.35s ease;
+}
+
+.btn-primary:hover,
+.btn-demo:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(20,184,166,.35);
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#0f3d75;
+}
+
+/*==================================================
+GLOBAL CARD HOVER
+==================================================*/
+
+.card,
+.workflow-card,
+.store-card,
+.report-box,
+.why-card,
+.company-box,
+.step{
+    transition:all .35s ease;
+}
+
+.card:hover,
+.workflow-card:hover,
+.store-card:hover,
+.report-box:hover,
+.why-card:hover,
+.company-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+/*==================================================
+SECTION SPACING
+==================================================*/
+
+section{
+    scroll-margin-top:90px;
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+.hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero-right{
+    margin-top:50px;
+}
+
+.architecture{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.circle{
+    width:220px;
+    height:220px;
+    margin:auto;
+}
+
+.nav ul{
+    display:none;
+}
+
+.contact-info{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+.step{
+    width:100%;
+}
+
+.arrow{
+    transform:rotate(90deg);
+}
+
+.dashboard{
+    width:100%;
+}
+
+.stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:576px){
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.btn-primary,
+.btn-outline{
+    display:block;
+    width:100%;
+    text-align:center;
+}
+
+.company-box{
+    padding:30px 20px;
+}
+
+}
+
+/*==================================================
+SMOOTH FADE LOOK
+==================================================*/
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    animation:fadeIn .6s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(15px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+.dashboard-image{
+    width:100%;
+    max-width:700px;
+    border-radius:20px;
+    box-shadow:0 30px 60px rgba(0,0,0,.25);
+    transition:.4s ease;
+}
+
+.dashboard-image:hover{
+    transform:translateY(-8px);
+}
+/*=========================
+/*=========================
+LOGOS
+=========================*/
+
+/* Navbar SENTRADESK Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:none;
+    box-shadow:none;
+    border:none;
+    padding:0;
+    width:auto;
+    height:auto;
+}
+
+.logo img{
+    width:90px;      /* চাইলে 80px বা 90px করতে পারো */
+    height:auto;
+    display:block;
+}
+
+/* ABOUT AJER X Logo */
+
+.company-logo{
+    text-align:center;
+    margin:25px 0 35px;
+}
+
+.company-logo img{
+    max-width:280px;
+    width:100%;
+    height:auto;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.brand h2{
+    margin:0;
+    font-size:28px;
+    font-weight:800;
+}
+
+.brand p{
+    margin:3px 0 0;
+    color:#6b7280;
+    font-size:13px;
+}
+.dashboard-image{
+
+width:100%;
+
+border-radius:18px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+transition:.4s;
+
+}
+
+.dashboard-image:hover{
 
 transform:translateY(-8px);
 
